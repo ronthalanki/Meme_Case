@@ -45,6 +45,18 @@ function vaporwaveify() {
 	setOutput(output);
 }
 
+function stringify() {
+	var input = getInput();
+	var output = "";
+
+	for (var i = 1; i <= input.length; i++) {
+		if (input.charAt(i) != ' ') {
+			output += input.substring(0, i) + '     '; //TODO: figure out linebreak
+		}
+	}
+	setOutput(output);
+}
+
 //copy-pasta methods
 function darth_tragedy() {
 	setOutput("Did you ever hear the tragedy of Darth Plagueis The Wise? I thought not. It's not a story the Jedi would tell you. It's a Sith legend. Darth Plagueis was a Dark Lord of the Sith, so powerful and so wise he could use the Force to influence the midichlorians to create life... He had such a knowledge of the dark side that he could even keep the ones he cared about from dying. The dark side of the Force is a pathway to many abilities some consider to be unnatural. He became so powerful... the only thing he was afraid of was losing his power, which eventually, of course, he did. Unfortunately, he taught his apprentice everything he knew, then his apprentice killed him in his sleep. Ironic. He could save others from death, but not himself.");
@@ -53,4 +65,5 @@ function darth_tragedy() {
 //set on-click methods
 document.getElementById('vaporwave').onclick = vaporwaveify;
 document.getElementById('spongebob').onclick = spongebobify;
+document.getElementById('stringify').onclick = stringify;
 document.getElementById('darth_tragedy').onclick = darth_tragedy;
