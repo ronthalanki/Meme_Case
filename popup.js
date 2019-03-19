@@ -5,13 +5,13 @@ function getInput() {
 
 function setOutput(output) {
 	document.getElementById('result').textContent = output;
-
 }
 
 //transform text methods
 function spongebobify() {
 	var input = getInput();
-	
+	input = input.toLowerCase();
+	/*
 	var flag = false;
 	while (!flag) {
 		countUpper = 0;
@@ -28,10 +28,33 @@ function spongebobify() {
 		}
 
 		//validation of string
-		if (countUpper < (0.7 * input.length) && countUpper > (0.3 * input.length)) {
+		if (countUpper < (0.7 * input.length) && countUpper > (0.3 * inpinputut.length)) {
 			flag = true;
 		}
 	}
+	*/
+
+	var spaces = [];
+	var sum_spaces = 0;
+	for (var i = 0; i < 100; i++) {
+		sum_spaces += Math.floor(Math.random() * 2) + 1
+		spaces.push(sum_spaces)
+	}
+
+	output = "";
+	index = 0;
+	spaces_index = 0;
+	//output += input.charAt(0);
+	while (index < input.length) {
+		if (index == spaces[spaces_index]) {
+			output += input.charAt(index).toUpperCase();
+			spaces_index += 1
+		} else {
+			output += input.charAt(index).toLowerCase();
+		}
+		index += 1;
+	}
+	
 	setOutput(output);
 }
 
