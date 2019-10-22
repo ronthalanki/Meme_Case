@@ -74,7 +74,7 @@ function stringify() {
 
 	for (var i = 1; i <= input.length; i++) {
 		if (input.charAt(i) != ' ') {
-			output += input.substring(0, i) + '     '; //TODO: figure out linebreak
+			output += input.substring(0, i) + '     ';
 		}
 	}
 	setOutput(output);
